@@ -1,0 +1,122 @@
+.section .container .title {
+  width: auto;
+}
+.section .container .title p:first-child {
+  font-size: 30px;
+  color: hsl(225deg 13% 36%);
+}
+.section .container .title p {
+  direction: rtl;
+  padding-right: 50px;
+}
+.section .container .details {
+  width: 80%;
+}
+/*Start experiance */
+.experiance,
+.contact {
+  background-color: hsl(0deg 0% 94%);
+  padding: 100px 0px;
+}
+
+.experiance .container .details,
+.works .container .images {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  width: 70%;
+  object-fit: cover;
+}
+.works .container .images {
+  grid-template-rows: repeat(2, 270px);
+}
+.experiance .container .details div {
+  grid-column: span 4;
+  background-color: white;
+  padding: 20px;
+  cursor: default;
+  line-height: 25px;
+  transition: transform 0.2s 0s linear;
+}
+
+.experiance .container .details div:hover {
+  background-color: var(--mainColor);
+  color: white;
+  transform: scale(1.05);
+}
+
+.experiance .container .details div p {
+  margin-bottom: 20px;
+}
+
+.experiance .container .details div p i {
+  font-size: 35px;
+  color: #5f5f5f;
+}
+
+.works .container .images div:nth-child(1) {
+  grid-column: span 8;
+}
+
+.works .container .images div {
+  grid-column: span 4;
+  overflow: hidden;
+}
+
+.works .container .images div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s 0s linear;
+}
+
+.works .container .images div img:hover {
+  box-shadow: 4px -1px 4px 0px hsl(186deg 4% 86%);
+  transform: scale(1.1);
+}
+.works .container {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+}
+/* End Works */
+@media (max-width: 767px) {
+  .section .container .details,
+  .section .container .title {
+    width: 100%;
+  }
+  .section .container .title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .section .container,
+  .contact .container .details {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section .container .title p {
+    padding-right: 0px;
+  }
+  .experiance .container .details div {
+    grid-column: span 12;
+    text-align: center;
+  }
+  .works .container .images div {
+    grid-column: span 12 !important;
+  }
+  .contact .container .details {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .contact .container .details div {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .experiance .container .details div {
+    grid-column: span 6;
+  }
+  .cover {
+    background-position: left;
+  }
+}
